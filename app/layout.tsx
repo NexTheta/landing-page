@@ -20,6 +20,14 @@ export const metadata: Metadata = {
   description:
     "Theta Sound builds screenless, emotion-first wearable tech. Liberation from glowing rectangles. Presence over pings.",
   generator: "v0.app",
+  icons: {
+    icon: [
+      { url: '/images/theta-symbol.png', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/theta-symbol.png', type: 'image/png' },
+    ],
+  },
 }
 
 export default function RootLayout({
