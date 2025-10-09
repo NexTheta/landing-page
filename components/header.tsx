@@ -6,11 +6,11 @@ import { Button } from "@/components/ui/button"
 export const Header = () => {
   return (
     <div className="sticky top-0 z-50">
-      <header className="border-b border-border/50 bg-black/70 backdrop-blur-xl">
+      <header className="border-b border-border/60 bg-background/70 backdrop-blur-xl">
         <div className="container flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/theta-logo.png"
+              src="/images/theta-symbol.png"
               alt="Theta Sound logo"
               width={120}
               height={120}

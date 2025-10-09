@@ -58,7 +58,14 @@ export function TiltBento({ className }: { className?: string }) {
 
       <div className="grid grid-cols-1 gap-4 md:auto-rows-[200px] md:grid-cols-3">
         {tiles.map((t) => (
-          <TiltCard key={t.id} className={cn("p-5 md:p-6", "bg-background", "hover:border-primary", t.span)}>
+          <TiltCard
+            key={t.id}
+            className={cn(
+              "p-5 md:p-6 rounded-2xl border border-border soft-glass soft-shadow",
+              "hover:border-primary/70 hover:shadow-xl transition",
+              t.span,
+            )}
+          >
             <div className="flex h-full flex-col justify-between">
               <div className="flex items-center gap-3">
                 {t.icon ? (

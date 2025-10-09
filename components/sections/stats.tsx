@@ -22,7 +22,7 @@ export function Stats({ className }: { className?: string }) {
   const rebels = useCountUp(10000)
   const screens = useCountUp(0)
   return (
-    <section className={cn("section-padding border-t border-border/60", className)}>
+    <section className={cn("section-y border-t border-border/60", className)}>
       <div className="container grid grid-cols-1 gap-8 text-center md:grid-cols-3">
         <div>
           <div className="heading-gradient font-sentient text-5xl md:text-6xl">{rebels.toLocaleString()}+</div>

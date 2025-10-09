@@ -10,7 +10,7 @@ export function ThetaHero() {
       <div className="container text-center">
         <div className="flex items-center justify-center">
           <Image
-            src="/images/theta-logo.png"
+            src="/images/theta-symbol.png"
             alt="Theta Sound"
             width={120}
             height={120}

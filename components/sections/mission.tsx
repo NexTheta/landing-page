@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils"
 
 export function Mission({ className }: { className?: string }) {
   return (
-    <section id="mission" className={cn("section-padding", className)}>
+    <section id="mission" className={cn("section-y", className)}>
       <div className="container text-center">
         <p className="eyebrow text-primary">The Mission</p>
         <h2 className="heading-gradient font-sentient mx-auto mt-3 max-w-4xl text-pretty text-4xl md:text-6xl">

@@ -5,10 +5,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { DottedSurface } from "@/components/ui/dotted-surface"
 import { ScrollVelocity } from "@/components/ui/scroll-velocity"
-import { TiltBento } from "@/components/sections/tilt-bento"
-import { WaitlistDialog } from "@/components/waitlist-dialog"
+import { ColorfulBentoGrid } from "@/components/ui/colorful-bento-grid"
 import { Stats } from "@/components/sections/stats"
 import { Mission } from "@/components/sections/mission"
+import { WaitlistDialog } from "@/components/waitlist-dialog" // Import WaitlistDialog
 
 export default function Home() {
   return (
@@ -29,8 +29,8 @@ export default function Home() {
       {/* New Stats section */}
       <Stats />
 
-      {/* Modern Tilt Bento features section */}
-      <TiltBento className="py-16 md:py-24" />
+      {/* Modern Colorful Bento Grid features section */}
+      <ColorfulBentoGrid className="py-16 md:py-24" />
 
       {/* New Mission section */}
       <Mission />
