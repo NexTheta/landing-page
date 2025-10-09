@@ -22,19 +22,25 @@ export function Stats({ className }: { className?: string }) {
   const rebels = useCountUp(10000)
   const screens = useCountUp(0)
   return (
-    <section className={cn("section-y border-t border-border/60", className)}>
-      <div className="container grid grid-cols-1 gap-8 text-center md:grid-cols-3">
-        <div>
-          <div className="heading-gradient font-sentient text-5xl md:text-6xl">{rebels.toLocaleString()}+</div>
-          <div className="mt-2 text-xs uppercase tracking-[0.15em] text-foreground/60">Rebels Joined</div>
+    <section className={cn("section-y border-t border-border/50", className)}>
+      <div className="container grid grid-cols-1 gap-12 text-center md:grid-cols-3 md:gap-8">
+        <div className="group">
+          <div className="heading-gradient font-sentient text-6xl md:text-7xl font-extralight transition-transform duration-300 group-hover:scale-110">
+            {rebels.toLocaleString()}+
+          </div>
+          <div className="mt-3 text-sm uppercase tracking-[0.2em] text-foreground/70 font-semibold">Rebels Joined</div>
         </div>
-        <div>
-          <div className="heading-gradient font-sentient text-5xl md:text-6xl">{screens}</div>
-          <div className="mt-2 text-xs uppercase tracking-[0.15em] text-foreground/60">Screens Needed</div>
+        <div className="group">
+          <div className="heading-gradient font-sentient text-6xl md:text-7xl font-extralight transition-transform duration-300 group-hover:scale-110">
+            {screens}
+          </div>
+          <div className="mt-3 text-sm uppercase tracking-[0.2em] text-foreground/70 font-semibold">Screens Needed</div>
         </div>
-        <div>
-          <div className="heading-gradient font-sentient text-5xl md:text-6xl">∞</div>
-          <div className="mt-2 text-xs uppercase tracking-[0.15em] text-foreground/60">Possibilities Unlocked</div>
+        <div className="group">
+          <div className="heading-gradient font-sentient text-6xl md:text-7xl font-extralight transition-transform duration-300 group-hover:scale-110">
+            ∞
+          </div>
+          <div className="mt-3 text-sm uppercase tracking-[0.2em] text-foreground/70 font-semibold">Possibilities Unlocked</div>
         </div>
       </div>
     </section>

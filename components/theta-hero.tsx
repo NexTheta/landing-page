@@ -6,36 +6,40 @@ import Link from "next/link"
 
 export function ThetaHero() {
   return (
-    <section className="theta-hero-wrap flex min-h-svh flex-col justify-end pt-36 pb-16 md:pt-48 md:pb-24">
+    <section className="theta-hero-wrap flex min-h-svh flex-col justify-end pt-40 pb-20 md:pt-52 md:pb-28">
       <div className="container text-center">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mb-8">
           <Image
             src="/images/theta-symbol.png"
             alt="Theta Sound"
-            width={120}
-            height={120}
+            width={140}
+            height={140}
             priority
-            className="pointer-events-none select-none w-24 h-auto md:w-28 animate-theta-pulse"
+            className="pointer-events-none select-none w-28 h-auto md:w-36 animate-theta-pulse"
           />
         </div>
 
-        <p className="eyebrow mt-6">Design–Tech Rebellion</p>
+        <p className="eyebrow mt-6 text-base tracking-[0.2em]">Design–Tech Rebellion</p>
 
-        <h1 className="heading-gradient text-balance font-sentient mt-4 text-5xl sm:text-6xl md:text-7xl leading-[1.05] tracking-[-0.02em]">
+        <h1 className="heading-gradient text-balance font-sentient mt-6 text-6xl sm:text-7xl md:text-8xl leading-[0.95] tracking-[-0.03em] font-extralight">
           Liberate Your Senses.
           <br />
-          <span className="font-light">Feel Without Screens.</span>
+          <span className="font-light italic">Feel Without Screens.</span>
         </h1>
 
-        <p className="font-mono text-sm sm:text-base text-foreground/70 text-pretty mt-8 max-w-[640px] mx-auto">
+        <p className="font-mono text-base sm:text-lg md:text-xl text-foreground/75 text-pretty mt-10 max-w-[720px] mx-auto leading-relaxed">
           Screenless. Emotion-first. Presence over pings. Theta Sound is a voice-forward wearable that moves with you,
           not against you.
         </p>
 
-        <div className="cta-pair mt-12">
+        <div className="cta-pair mt-14 gap-4">
           <WaitlistDialog />
           <Link href="#buy" className="contents">
-            <Button variant="outline" className="theta-glow-ring bg-transparent" aria-label="Go to Buy section">
+            <Button 
+              variant="outline" 
+              className="theta-glow-ring bg-transparent hover:bg-primary/5 transition-all duration-300 text-base px-8" 
+              aria-label="Go to Buy section"
+            >
               Dare to Feel
             </Button>
           </Link>
