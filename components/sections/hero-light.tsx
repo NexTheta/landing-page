@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { WaitlistDialog } from "@/components/waitlist-dialog";
 import { motion } from "framer-motion";

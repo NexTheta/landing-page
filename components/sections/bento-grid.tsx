@@ -18,15 +18,15 @@ function Tile({ className, title, desc, children, accent = "accent" }: TileProps
   return (
     <div
       className={cn(
-        "group relative rounded-2xl border border-border bg-card/60 backdrop-blur-xl overflow-hidden soft-shadow",
-        "transition-transform duration-300 hover:translate-y-[-2px] hover:shadow-xl",
+        "group relative rounded-2xl border border-red-500/20 bg-gradient-to-br from-[#fffcf7] to-[#faf8f5] backdrop-blur-xl overflow-hidden soft-shadow",
+        "transition-transform duration-300 hover:translate-y-[-2px] hover:shadow-xl hover:border-red-500/40",
         className,
       )}
     >
       <div
-        className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        className="absolute inset-0 pointer-events-none"
         style={{
-          background: "radial-gradient(600px 200px at 20% 0%, hsl(var(--accent)/0.12) 0%, transparent 60%)",
+          background: "radial-gradient(600px 200px at 20% 0%, rgba(221, 3, 3, 0.15) 0%, transparent 60%)",
         }}
       />
       <div className="p-5 md:p-6 relative z-10">
@@ -52,8 +52,8 @@ export default function BentoGrid() {
     <section id="features" className="section">
       <div className="container-tight">
         <div className="mb-10">
-          <h2 className="text-2xl md:text-4xl font-semibold">Emotion is the Interface</h2>
-          <p className="text-muted-foreground mt-2">Presence-first features, engineered for calm.</p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-3">Emotion is the Interface</h2>
+          <p className="text-lg md:text-xl text-muted-foreground">Presence-first features, engineered for calm.</p>
         </div>
 
         {/* Responsive Bento: 6 tiles with varied spans */}

@@ -4,28 +4,28 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #ffffff;
+  --background: #faf8f5;
   --foreground: #0a0a0a;
   --brand-red: #dd0303;
   --brand-black: #0a0a0a;
   --brand-red-light: #ff3366;
   --brand-red-dark: #b30202;
-  --card: #ffffff;
+  --card: #fffcf7;
   --card-foreground: #0a0a0a;
-  --popover: #ffffff;
+  --popover: #fffcf7;
   --popover-foreground: #0a0a0a;
   --primary: #dd0303;
   --primary-foreground: #ffffff;
-  --secondary: #f5f5f5;
+  --secondary: #f5f3f0;
   --secondary-foreground: #0a0a0a;
-  --muted: #f5f5f5;
+  --muted: #f5f3f0;
   --muted-foreground: #737373;
   --accent: #dd0303;
   --accent-foreground: #ffffff;
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e5e5e5;
-  --input: #e5e5e5;
+  --border: #e8e4df;
+  --input: #e8e4df;
   --ring: #dd0303;
   --radius: 0.75rem;
   --gradient-start: #dd0303;
@@ -77,6 +77,32 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+  
+  /* Animated gradient text with color shifting */
+  .gradient-text-animated {
+    background: linear-gradient(
+      135deg,
+      #DD0303 0%,
+      #FF3366 30%,
+      #FF6B35 60%,
+      #DD0303 100%
+    );
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 8s ease infinite;
+  }
+  
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
   .gradient-mesh {
     background: radial-gradient(at 0% 0%, rgba(221, 3, 3, 0.1) 0px, transparent 50%), radial-gradient(at 100% 0%, rgba(255, 107, 53, 0.08) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(255, 51, 102, 0.05) 0px, transparent 50%), radial-gradient(at 0% 100%, rgba(221, 3, 3, 0.05) 0px, transparent 50%);
   }
@@ -84,6 +110,49 @@
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .bg-size-200 {
+    background-size: 200%;
+  }
+  .bg-pos-0 {
+    background-position: 0% center;
+  }
+  .bg-pos-100 {
+    background-position: 100% center;
+  }
+  
+  /* Ripple effect animation */
+  @keyframes cell-ripple {
+    0% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-cell-ripple {
+    animation-name: cell-ripple;
+    animation-duration: var(--duration, 400ms);
+    animation-delay: var(--delay, 0ms);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Mask utilities for radial effects */
+  .mask-radial-from-20\% {
+    mask-image: radial-gradient(circle, black 20%, transparent 80%);
+    -webkit-mask-image: radial-gradient(circle, black 20%, transparent 80%);
+  }
+  
+  .mask-radial-at-top {
+    mask-position: center top;
+    -webkit-mask-position: center top;
   }
 }
 

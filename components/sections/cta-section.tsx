@@ -87,7 +87,7 @@ export function CTASection() {
                 {/* Heading */}
                 <div>
                   <motion.h2 
-                    className="text-5xl md:text-6xl font-light text-foreground mb-4"
+                    className="text-4xl md:text-5xl lg:text-6xl font-light text-foreground mb-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -96,7 +96,7 @@ export function CTASection() {
                     Ready to experience
                   </motion.h2>
                   <motion.h2 
-                    className="text-5xl md:text-6xl gradient-text font-normal"
+                    className="text-4xl md:text-5xl lg:text-6xl gradient-text-animated font-bold"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -128,7 +128,7 @@ export function CTASection() {
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <WaitlistDialog triggerClassName="group relative px-10 py-5 bg-gradient-to-r from-red-500 via-red-600 to-red-500 text-white rounded-full font-medium text-xl shadow-2xl shadow-red-500/40 hover:shadow-red-500/60 transition-all duration-300" />
+                    <WaitlistDialog triggerClassName="group relative px-10 py-5 bg-gradient-to-r from-red-500 via-red-600 to-red-500 text-white rounded-full font-semibold text-lg shadow-2xl shadow-red-500/40 hover:shadow-red-500/60 transition-all duration-300" />
                   </motion.div>
                 </motion.div>
               </div>

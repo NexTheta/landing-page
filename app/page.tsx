@@ -1,5 +1,6 @@
 import { Header } from "@/components/header";
 import { HeroLight } from "@/components/sections/hero-light";
+import { HeroRippleExperiment } from "@/components/sections/hero-ripple-experiment";
 import { InfiniteRibbon } from "@/components/sections/infinite-ribbon";
 import { StatsSection } from "@/components/sections/stats-section";
 import { FeaturesSection } from "@/components/sections/features-section";
@@ -16,7 +17,9 @@ export default function Home() {
       <Header />
       <main>
         <section id="hero">
-          <HeroLight />
+          {/* TESTING: Ripple Effect Experiment */}
+          <HeroRippleExperiment />
+          {/* Original: <HeroLight /> */}
         </section>
         <InfiniteRibbon />
         <section id="features">
