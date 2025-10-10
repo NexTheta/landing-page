@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Twitter, Linkedin, Instagram } from "lucide-react";
+import { Twitter, Linkedin, Instagram, Mail } from "lucide-react";
 import Image from "next/image";
 
 const footerLinks = {
@@ -33,9 +33,10 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Twitter, href: "https://twitter.com/thetasound", label: "Twitter" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/theta-sound/", label: "LinkedIn" },
+  { icon: Instagram, href: "https://instagram.com/thetasound", label: "Instagram" },
+  { icon: Mail, href: "mailto:Theta.sound.info@gmail.com", label: "Email" },
 ];
 
 export function Footer() {
@@ -80,11 +81,13 @@ export function Footer() {
             <p className="text-foreground/60 mb-6">
               Experience sound without screens
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-4 mb-4">
               {socialLinks.map((social) => (
                 <Link
                   key={social.label}
                   href={social.href}
+                  target={social.href.startsWith('http') ? '_blank' : undefined}
+                  rel={social.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   className="w-10 h-10 rounded-full glass border border-border hover:border-red-500/30 flex items-center justify-center text-foreground/60 hover:text-red-500 transition-all duration-300"
                   aria-label={social.label}
                 >
@@ -92,6 +95,13 @@ export function Footer() {
                 </Link>
               ))}
             </div>
+            <Link 
+              href="mailto:Theta.sound.info@gmail.com"
+              className="text-sm text-foreground/60 hover:text-red-500 transition-colors flex items-center gap-2"
+            >
+              <Mail className="w-4 h-4" />
+              Theta.sound.info@gmail.com
+            </Link>
           </div>
 
           {/* Links */}
