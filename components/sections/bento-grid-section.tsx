@@ -70,7 +70,7 @@ export function BentoGridSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[200px] gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 auto-rows-[200px] gap-4 md:gap-6">
           {bentoItems.map((item, index) => (
             <motion.div
               key={item.title}
@@ -87,9 +87,9 @@ export function BentoGridSection() {
                 rotateZ: 1,
                 transition: { duration: 0.2 }
               }}
-              className={`group ${item.className}`}
+              className={`group md:${item.className}`}
             >
-              <div className={`relative h-full glass rounded-3xl p-8 border border-red-500/10 hover:border-red-500/30 transition-all duration-300 overflow-hidden cursor-pointer`}>
+              <div className={`relative h-full glass rounded-3xl p-6 md:p-8 border border-red-500/10 hover:border-red-500/30 transition-all duration-300 overflow-hidden cursor-pointer`}>
                 {/* Gradient Background */}
                 <motion.div 
                   className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
@@ -104,21 +104,21 @@ export function BentoGridSection() {
                 <div className="relative h-full flex flex-col justify-between">
                   <div>
                     <motion.div 
-                      className="w-14 h-14 rounded-2xl bg-red-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform duration-300"
+                      className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-red-500 flex items-center justify-center text-white mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300"
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.6 }}
                     >
-                      <item.icon className="w-7 h-7" />
+                      <item.icon className="w-6 h-6 md:w-7 md:h-7" />
                     </motion.div>
                     <motion.h3 
-                      className="text-2xl font-medium text-foreground mb-2"
+                      className="text-xl md:text-2xl font-medium text-foreground mb-2"
                       initial={{ x: 0 }}
                       whileHover={{ x: 5 }}
                       transition={{ duration: 0.2 }}
                     >
                       {item.title}
                     </motion.h3>
-                    <p className="text-foreground/70">
+                    <p className="text-sm md:text-base text-foreground/70">
                       {item.description}
                     </p>
                   </div>
