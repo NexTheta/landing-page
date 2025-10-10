@@ -54,10 +54,11 @@ export function StatsSection() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
-            Built for the future
+            Built for Future.
           </h2>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Experience the next generation of audio technology
+          <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
+            <span className="block mb-2">No screens // NO friction // NO distraction.</span>
+            <span className="block font-medium text-foreground/90">We put the power back into your control</span>
           </p>
         </motion.div>
 

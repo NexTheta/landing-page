@@ -1,29 +1,24 @@
 "use client";
 
 import { motion, useTransform, useScroll } from "framer-motion";
-import { Brain, Zap, Heart, Sparkles } from "lucide-react";
+import { Brain, Zap, Sparkles } from "lucide-react";
 import { useRef } from "react";
 
 const features = [
   {
     icon: Brain,
-    title: "AI Understanding",
-    description: "Our AI analyzes your emotional state in real-time to curate the perfect audio experience.",
-  },
-  {
-    icon: Heart,
-    title: "Emotion Detection",
-    description: "Advanced sensors detect subtle changes in your mood and adapt instantly.",
+    title: "Conversational",
+    description: "Natural dialogue that understands context and intent. Control in every moment through the power of your voice.",
   },
   {
     icon: Zap,
-    title: "Instant Adaptation",
-    description: "Seamlessly transitions between moods without interrupting your experience.",
+    title: "Automated workflows",
+    description: "Set it once, forget it forever. Smart routines that adapt to your life and seamlessly work in the background.",
   },
   {
     icon: Sparkles,
-    title: "Personalized",
-    description: "Learns your preferences over time to deliver increasingly perfect matches.",
+    title: "Data turned into functional utility",
+    description: "Your data transformed into actionable insights. Location-based reminders, fitness tracking, and smart suggestions.",
   },
 ];
 
@@ -52,10 +47,10 @@ export function FeaturesSection() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
-                Intelligent by design
+                Voice OS
               </h2>
               <p className="text-xl text-foreground/70">
-                Every feature is crafted to create the most natural audio experience possible.
+                Control in every moment. Every feature is crafted to create the most natural experience possible.
               </p>
             </motion.div>
 

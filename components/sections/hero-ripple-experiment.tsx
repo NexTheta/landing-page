@@ -70,29 +70,100 @@ export function HeroRippleExperiment() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="text-5xl md:text-7xl lg:text-8xl mb-6 tracking-tight"
+          className="text-5xl md:text-7xl lg:text-8xl mb-8 tracking-tight"
           style={{ fontFamily: "Sentient, system-ui" }}
         >
-          <span className="block font-light text-neutral-900">Creating an</span>
+          <span className="block font-light text-neutral-900 mb-2">Creating an</span>
           <span className="block gradient-text-animated font-bold">extension of you</span>
         </motion.h1>
+
+        {/* Subtitle - Your Voice */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mb-10"
+        >
+          <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-neutral-900 mb-3">
+            Your voice.
+          </p>
+          <p className="text-xl md:text-2xl lg:text-3xl text-neutral-700 font-medium">
+            Your power.
+          </p>
+        </motion.div>
 
         {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-xl md:text-2xl text-neutral-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="text-lg md:text-xl text-neutral-600 mb-10 max-w-2xl mx-auto leading-relaxed font-medium"
         >
-          Click anywhere to create ripples. Experience the future of interactive design.
+          Experience the future of personal assistance—powered entirely by your voice, controlled completely by you.
         </motion.p>
+
+        {/* Tech badges */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="flex flex-wrap gap-4 justify-center mb-14"
+        >
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            whileHover={{ scale: 1.05, y: -3 }}
+            className="relative group"
+          >
+            {/* Animated gradient border */}
+            <motion.div
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-red-500 via-orange-500 to-red-500 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300"
+              animate={{
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
+            <span className="relative block px-8 py-3 backdrop-blur-xl bg-white/90 border-2 border-neutral-300 rounded-full text-base font-bold text-neutral-800 shadow-lg group-hover:border-red-400 group-hover:shadow-2xl group-hover:shadow-red-200/50 transition-all duration-300">
+              Voice Operating System
+            </span>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 1.0 }}
+            whileHover={{ scale: 1.05, y: -3 }}
+            className="relative group"
+          >
+            {/* Animated gradient border */}
+            <motion.div
+              className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 via-red-500 to-purple-500 opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300"
+              animate={{
+                backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "linear"
+              }}
+            />
+            <span className="relative block px-8 py-3 backdrop-blur-xl bg-white/90 border-2 border-neutral-300 rounded-full text-base font-bold text-neutral-800 shadow-lg group-hover:border-purple-400 group-hover:shadow-2xl group-hover:shadow-purple-200/50 transition-all duration-300">
+              Two-Finger Biometric Sensors
+            </span>
+          </motion.div>
+        </motion.div>
 
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center pointer-events-auto"
+          transition={{ duration: 0.6, delay: 0.9 }}
+          className="flex flex-col sm:flex-row gap-5 justify-center items-center pointer-events-auto"
         >
           <motion.div
             whileHover={{ scale: 1.05 }}
@@ -101,7 +172,7 @@ export function HeroRippleExperiment() {
           >
             {/* Animated frame */}
             <motion.div
-              className="absolute inset-0 rounded-xl border-2 border-red-500"
+              className="absolute inset-0 rounded-2xl border-2 border-red-500"
               animate={{
                 opacity: [0.5, 1, 0.5],
                 scale: [1, 1.02, 1],
@@ -112,13 +183,13 @@ export function HeroRippleExperiment() {
                 ease: "easeInOut"
               }}
             />
-            <WaitlistDialog triggerClassName="relative px-10 py-4 bg-gradient-to-r from-red-500 via-red-600 to-red-500 text-white rounded-xl font-semibold text-lg shadow-lg shadow-red-500/30 hover:shadow-xl hover:shadow-red-500/50 transition-all duration-300 border-2 border-red-400/50" />
+            <WaitlistDialog triggerClassName="relative px-12 py-5 bg-gradient-to-r from-red-500 via-red-600 to-red-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-red-500/40 hover:shadow-2xl hover:shadow-red-500/60 transition-all duration-300 border-2 border-red-400/50" />
           </motion.div>
           
           <motion.button 
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 backdrop-blur-xl bg-white/60 border border-neutral-200 rounded-xl font-semibold text-lg text-neutral-900 hover:bg-white/80 transition-all duration-300"
+            className="px-10 py-5 backdrop-blur-xl bg-white/80 border-2 border-neutral-300 rounded-2xl font-bold text-lg text-neutral-900 hover:bg-white hover:border-neutral-400 transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Watch Demo
           </motion.button>

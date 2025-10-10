@@ -1,48 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Music, Headphones, Waves, Radio, Mic, Volume2 } from "lucide-react";
+import { Car, MapPin, Heart, ShieldAlert, Mic, Activity } from "lucide-react";
 
 const bentoItems = [
   {
-    title: "Smart Playlists",
-    description: "AI-curated music that matches your emotional state",
-    icon: Music,
+    title: "Book a Cab",
+    description: "Just say where you want to go—we'll handle the rest with your preferred ride service",
+    icon: Car,
     className: "col-span-2 row-span-2",
     gradient: "from-red-500/10 to-orange-500/10",
   },
   {
-    title: "Voice Control",
-    description: "Hands-free operation",
+    title: "Voice Commands",
+    description: "Natural conversations, not rigid commands",
     icon: Mic,
     className: "col-span-1 row-span-1",
     gradient: "from-pink-500/10 to-red-500/10",
   },
   {
-    title: "Spatial Audio",
-    description: "Immersive 3D sound",
-    icon: Headphones,
+    title: "Track Fitness",
+    description: "Monitor your health without lifting a finger",
+    icon: Activity,
     className: "col-span-1 row-span-1",
     gradient: "from-orange-500/10 to-amber-500/10",
   },
   {
-    title: "Mood Waves",
-    description: "Visualize your emotional journey through sound",
-    icon: Waves,
+    title: "Memory Geo-Pins",
+    description: "Smart reminders triggered by locations—never forget when you arrive",
+    icon: MapPin,
     className: "col-span-1 row-span-2",
     gradient: "from-red-500/10 to-pink-500/10",
   },
   {
-    title: "Live Radio",
-    description: "Curated stations worldwide",
-    icon: Radio,
+    title: "Panic Detection",
+    description: "Built-in safety that alerts emergency contacts when you need help",
+    icon: ShieldAlert,
     className: "col-span-2 row-span-1",
     gradient: "from-amber-500/10 to-orange-500/10",
   },
   {
-    title: "Adaptive Volume",
-    description: "Auto-adjusts to your environment",
-    icon: Volume2,
+    title: "Biometric Security",
+    description: "Two-finger sensors keep your data secure",
+    icon: Heart,
     className: "col-span-1 row-span-1",
     gradient: "from-red-500/10 to-orange-500/10",
   },
@@ -63,10 +63,10 @@ export function BentoGridSection() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
-            Everything you need
+            Powerful capabilities
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Powerful features designed for the modern audio experience
+            From simple tasks to life-saving features, all controlled by your voice
           </p>
         </motion.div>
 
