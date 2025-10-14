@@ -3,10 +3,7 @@
 import { motion } from "framer-motion";
 
 const features = [
-  "SCREENLESS",
-  "EMOTION-DRIVEN",
-  "AI-POWERED",
-  "SEAMLESS",
+  
   "PERSONALIZED",
   "INTUITIVE",
   "ADAPTIVE",
