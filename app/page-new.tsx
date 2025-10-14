@@ -20,7 +20,7 @@ export default function Home() {
 
       {/* YC-style marquee band */}
       <ScrollVelocity
-        texts={["DESIGN", "REBELLION", "INNOVATION", "FUTURE", "VOICE-FIRST", "SCREENLESS", "EMOTION-DRIVEN"]}
+        texts={["DESIGN", "", "INNOVATION", "FUTURE", "VOICE-FIRST", "SCREENLESS", "EMOTION-DRIVEN"]}
         velocity={150}
         className="border-y-0 py-3"
         numCopies={8}
