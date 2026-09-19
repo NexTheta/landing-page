@@ -110,7 +110,8 @@ export const Header = () => {
               { name: "Features", href: "#features" },
               { name: "Mission", href: "#mission" },
               { name: "Pricing", href: "#pricing" },
-              { name: "Contact", href: "#contact" }
+              { name: "Contact", href: "#contact" },
+              { name: "The Constant", href: "/the-constant" }
             ].map((item, index) => (
               <NavLink key={item.name} href={item.href} delay={index * 0.1}>
                 {item.name}

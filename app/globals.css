@@ -31,6 +31,16 @@
   --gradient-start: #dd0303;
   --gradient-mid: #ff3366;
   --gradient-end: #ff6b35;
+
+  /* The Constant — refined ramp, derived from public/images/palette.png
+     (#FEF3E2 / #F9B12F / #FA812F / #DE0304). Scoped to this page only. */
+  --tc-obsidian: #100b07;
+  --tc-graphite: #1c1510;
+  --tc-ember: #c4301d;
+  --tc-copper: #e06a22;
+  --tc-honey: #e9a32b;
+  --tc-ash: #8a7d70;
+  --tc-cream: #fef3e2;
 }
 
 .dark {
@@ -170,4 +180,47 @@
   font-weight: 300;
   font-style: italic;
   font-display: swap;
+}
+
+/* Custom day-timeline scrubber used on /the-constant */
+.constant-scrubber {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--track-color, #00000022);
+  outline: none;
+  cursor: pointer;
+}
+
+.constant-scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: var(--thumb-color, #dd0303);
+  box-shadow: 0 0 0 6px rgba(221, 3, 3, 0.15);
+  cursor: grab;
+  transition: background-color 0.3s ease;
+}
+
+.constant-scrubber::-webkit-slider-thumb:active {
+  cursor: grabbing;
+}
+
+.constant-scrubber::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 999px;
+  background: var(--thumb-color, #dd0303);
+  box-shadow: 0 0 0 6px rgba(221, 3, 3, 0.15);
+  cursor: grab;
+}
+
+.constant-scrubber::-moz-range-track {
+  height: 2px;
+  border-radius: 999px;
+  background: var(--track-color, #00000022);
 }

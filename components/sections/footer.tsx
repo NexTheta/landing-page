@@ -78,7 +78,7 @@ export function Footer() {
               <span className="text-2xl font-light text-foreground">Theta</span>
             </div>
             <p className="text-foreground/60 mb-6">
-              Experience sound without screens
+              Your AI assistant, worn in your ear
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (

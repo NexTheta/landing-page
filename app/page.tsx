@@ -5,6 +5,7 @@ import { InfiniteRibbon } from "@/components/sections/infinite-ribbon";
 import { StatsSection } from "@/components/sections/stats-section";
 import { FeaturesSection } from "@/components/sections/features-section";
 import { BentoGridSection } from "@/components/sections/bento-grid-section";
+import { FunctionDemoSection } from "@/components/sections/function-demo-section";
 import { MissionSection } from "@/components/sections/mission-section";
 import { CTASection } from "@/components/sections/cta-section";
 import { Footer } from "@/components/sections/footer";
@@ -27,6 +28,7 @@ export default function Home() {
           <FeaturesSection />
         </section>
         <BentoGridSection />
+        <FunctionDemoSection />
         <section id="mission">
           <MissionSection />
         </section>

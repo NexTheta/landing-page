@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Theta Sound — Screenless. Presence. No Distractions.",
+  title: "Theta Sound — Your personal executive assistant that works for you",
   description:
-    "Theta Sound builds screenless, emotion-first wearable tech. Liberation from glowing rectangles. Presence over pings.",
+    "Theta listens, comprehends, and executes the cumbersome, operational tasks creating friction in your daily life — so you can focus on what you're best at.",
   generator: "v0.app",
   icons: {
     icon: [

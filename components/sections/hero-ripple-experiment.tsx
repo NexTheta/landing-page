@@ -73,8 +73,8 @@ export function HeroRippleExperiment() {
           className="text-5xl md:text-7xl lg:text-8xl mb-8 tracking-tight"
           style={{ fontFamily: "Sentient, system-ui" }}
         >
-          <span className="block font-light text-neutral-900 mb-2">Creating an</span>
-          <span className="block gradient-text-animated font-bold">extension of you</span>
+          <span className="block font-light text-neutral-900 mb-2">Your personal executive assistant</span>
+          <span className="block gradient-text-animated font-bold">that works for you</span>
         </motion.h1>
 
         {/* Subtitle - Your Voice */}
@@ -85,10 +85,10 @@ export function HeroRippleExperiment() {
           className="mb-10"
         >
           <p className="text-3xl md:text-4xl lg:text-5xl font-semibold text-neutral-900 mb-3">
-            Your voice.
+            No screen to check.
           </p>
           <p className="text-xl md:text-2xl lg:text-3xl text-neutral-700 font-medium">
-            Your power.
+            No app to open.
           </p>
         </motion.div>
 
@@ -99,7 +99,7 @@ export function HeroRippleExperiment() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-lg md:text-xl text-neutral-600 mb-10 max-w-2xl mx-auto leading-relaxed font-medium"
         >
-          Experience the future of personal assistance—powered entirely by your voice, controlled completely by you.
+          Theta listens, comprehends, and executes the cumbersome, operational tasks creating friction in your daily life — so you can focus on what you're best at, the work you actually enjoy.
         </motion.p>
 
         {/* Tech badges */}
@@ -129,7 +129,7 @@ export function HeroRippleExperiment() {
               }}
             />
             <span className="relative block px-8 py-3 backdrop-blur-xl bg-white/90 border-2 border-neutral-300 rounded-full text-base font-bold text-neutral-800 shadow-lg group-hover:border-red-400 group-hover:shadow-2xl group-hover:shadow-red-200/50 transition-all duration-300">
-              Voice Operating System
+              In-Ear AI Assistant
             </span>
           </motion.div>
           
@@ -153,7 +153,7 @@ export function HeroRippleExperiment() {
               }}
             />
             <span className="relative block px-8 py-3 backdrop-blur-xl bg-white/90 border-2 border-neutral-300 rounded-full text-base font-bold text-neutral-800 shadow-lg group-hover:border-purple-400 group-hover:shadow-2xl group-hover:shadow-purple-200/50 transition-all duration-300">
-              Two-Finger Biometric Sensors
+              All-Day Comfort Fit
             </span>
           </motion.div>
         </motion.div>

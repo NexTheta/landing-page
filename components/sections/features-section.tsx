@@ -3,6 +3,7 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { Brain, Zap, Sparkles } from "lucide-react";
 import { useRef } from "react";
+import { AmicroFeatureCard } from "@/components/ui/amicro-feature-card";
 
 const features = [
   {
@@ -54,33 +55,24 @@ export function FeaturesSection() {
               </p>
             </motion.div>
 
-            <div className="space-y-6">
+            <div className="flex flex-col items-start gap-6">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  transition={{ 
-                    duration: 0.6, 
+                  transition={{
+                    duration: 0.6,
                     delay: index * 0.15,
                     ease: [0.22, 1, 0.36, 1]
                   }}
-                  className="group"
                 >
-                  <div className="flex gap-4 p-6 rounded-2xl hover:bg-red-50/50 transition-colors duration-300">
-                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500 flex items-center justify-center text-white">
-                      <feature.icon className="w-6 h-6" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-medium text-foreground mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-foreground/70">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
+                  <AmicroFeatureCard
+                    icon={feature.icon}
+                    label={feature.title}
+                    description={feature.description}
+                  />
                 </motion.div>
               ))}
             </div>

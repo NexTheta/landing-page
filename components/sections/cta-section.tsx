@@ -95,14 +95,14 @@ export function CTASection() {
                   >
                     Ready to experience
                   </motion.h2>
-                  <motion.h2 
+                  <motion.h2
                     className="text-4xl md:text-5xl lg:text-6xl gradient-text-animated font-bold"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.3 }}
                   >
-                    the future of sound?
+                    an AI you wear?
                   </motion.h2>
                 </div>
 
