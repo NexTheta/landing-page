@@ -17,7 +17,6 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
   const menuItems = [
     { name: "Features", href: "#features" },
     { name: "Mission", href: "#mission" },
-    { name: "Pricing", href: "#pricing" },
     { name: "Contact", href: "#contact" },
     { name: "The Constant", href: "/the-constant" },
   ];

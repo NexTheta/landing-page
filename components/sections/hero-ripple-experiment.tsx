@@ -185,25 +185,7 @@ export function HeroRippleExperiment() {
             />
             <WaitlistDialog triggerClassName="relative px-12 py-5 bg-gradient-to-r from-red-500 via-red-600 to-red-500 text-white rounded-2xl font-bold text-lg shadow-2xl shadow-red-500/40 hover:shadow-2xl hover:shadow-red-500/60 transition-all duration-300 border-2 border-red-400/50" />
           </motion.div>
-          
-          <motion.button 
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 backdrop-blur-xl bg-white/80 border-2 border-neutral-300 rounded-2xl font-bold text-lg text-neutral-900 hover:bg-white hover:border-neutral-400 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            Watch Demo
-          </motion.button>
         </motion.div>
-
-        {/* Instruction hint */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
-          className="mt-16 text-sm text-neutral-500 pointer-events-auto"
-        >
-          💡 Click anywhere on the background to create ripples
-        </motion.p>
       </div>
     </section>
   );

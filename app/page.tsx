@@ -23,12 +23,12 @@ export default function Home() {
           {/* Original: <HeroLight /> */}
         </section>
         <InfiniteRibbon />
+        <FunctionDemoSection />
         <section id="features">
           <StatsSection />
           <FeaturesSection />
         </section>
         <BentoGridSection />
-        <FunctionDemoSection />
         <section id="mission">
           <MissionSection />
         </section>

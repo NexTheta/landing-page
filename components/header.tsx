@@ -109,7 +109,6 @@ export const Header = () => {
             {[
               { name: "Features", href: "#features" },
               { name: "Mission", href: "#mission" },
-              { name: "Pricing", href: "#pricing" },
               { name: "Contact", href: "#contact" },
               { name: "The Constant", href: "/the-constant" }
             ].map((item, index) => (
