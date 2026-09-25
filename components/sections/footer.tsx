@@ -2,41 +2,20 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { Twitter, Linkedin, Instagram } from "lucide-react";
 import Image from "next/image";
 
+// Only real, working destinations. Add categories back once real pages
+// (Privacy, Terms, Blog, etc.) and social accounts actually exist —
+// a dead link is a worse signal, to both crawlers and visitors, than no link.
 const footerLinks = {
   Product: [
     { name: "Features", href: "#features" },
-    { name: "Integrations", href: "#integrations" },
-    { name: "Pricing", href: "#pricing" },
-    { name: "Updates", href: "#updates" },
+    { name: "Mission", href: "#mission" },
   ],
   Company: [
-    { name: "About", href: "#about" },
-    { name: "Blog", href: "#blog" },
-    { name: "Careers", href: "#careers" },
     { name: "Contact", href: "#contact" },
   ],
-  Resources: [
-    { name: "Documentation", href: "#docs" },
-    { name: "Help Center", href: "#help" },
-    { name: "Community", href: "#community" },
-    { name: "Status", href: "#status" },
-  ],
-  Legal: [
-    { name: "Privacy", href: "#privacy" },
-    { name: "Terms", href: "#terms" },
-    { name: "Security", href: "#security" },
-    { name: "Cookies", href: "#cookies" },
-  ],
 };
-
-const socialLinks = [
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-];
 
 export function Footer() {
   return (
@@ -64,9 +43,9 @@ export function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
-          <div className="lg:col-span-1">
+          <div>
             <div className="flex items-center gap-2 mb-4">
               <Image
                 src="/images/theta-symbol.png"
@@ -80,18 +59,6 @@ export function Footer() {
             <p className="text-foreground/60 mb-6">
               Your AI assistant, worn in your ear
             </p>
-            <div className="flex gap-4">
-              {socialLinks.map((social) => (
-                <Link
-                  key={social.label}
-                  href={social.href}
-                  className="w-10 h-10 rounded-full glass border border-border hover:border-red-500/30 flex items-center justify-center text-foreground/60 hover:text-red-500 transition-all duration-300"
-                  aria-label={social.label}
-                >
-                  <social.icon className="w-5 h-5" />
-                </Link>
-              ))}
-            </div>
           </div>
 
           {/* Links */}

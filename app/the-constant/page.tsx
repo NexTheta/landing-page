@@ -134,6 +134,9 @@ export default function TheConstantPage() {
 
   return (
     <main style={{ background: GROUND[scenes[0].ground] }}>
+      <h1 className="sr-only">
+        The Constant — a day with Theta Sound, the in-ear AI assistant that stays constant while everything else changes
+      </h1>
       {/* Persistent header */}
       <div
         className="fixed top-0 left-0 right-0 z-30 flex items-center justify-between px-6 md:px-10 py-6"
@@ -200,22 +203,25 @@ export default function TheConstantPage() {
               >
                 {scene.hour} &middot; {scene.label}
               </div>
-              {scene.lines?.map((l, i) => (
-                <motion.p
-                  key={`${activeIndex}-${i}`}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                  className={`max-w-3xl text-3xl md:text-5xl lg:text-6xl leading-[1.15] tracking-[-0.015em] ${i === 1 ? "italic" : ""}`}
-                  style={{
-                    fontFamily: "Sentient, Georgia, serif",
-                    fontWeight: i === 1 ? 300 : 200,
-                    color: i === 1 ? "var(--tc-ember)" : ink,
-                  }}
-                >
-                  {l}
-                </motion.p>
-              ))}
+              {scene.lines?.map((l, i) => {
+                const Tag = i === 0 ? motion.h2 : motion.p;
+                return (
+                  <Tag
+                    key={`${activeIndex}-${i}`}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+                    className={`max-w-3xl text-3xl md:text-5xl lg:text-6xl leading-[1.15] tracking-[-0.015em] ${i === 1 ? "italic" : ""}`}
+                    style={{
+                      fontFamily: "Sentient, Georgia, serif",
+                      fontWeight: i === 1 ? 300 : 200,
+                      color: i === 1 ? "var(--tc-ember)" : ink,
+                    }}
+                  >
+                    {l}
+                  </Tag>
+                );
+              })}
             </div>
           ) : (
             // Standard layout: hour left of the spine, entries right of it
@@ -260,12 +266,12 @@ export default function TheConstantPage() {
                     style={{ borderTop: `1px solid ${dark ? "rgba(254,243,226,0.14)" : "rgba(16,11,7,0.12)"}` }}
                     className="py-5"
                   >
-                    <p
-                      className="text-xl md:text-3xl lg:text-4xl leading-[1.18]"
+                    <h3
+                      className="text-xl md:text-3xl lg:text-4xl leading-[1.18] font-normal"
                       style={{ fontFamily: "Sentient, Georgia, serif", fontWeight: 200, color: ink }}
                     >
                       {entry.line}
-                    </p>
+                    </h3>
                     <p
                       className="flex items-center gap-2 text-[10px] tracking-[0.16em] uppercase mt-3"
                       style={{ color: tagColor, fontFamily: "ui-monospace, monospace" }}
@@ -295,12 +301,12 @@ export default function TheConstantPage() {
         className="relative flex flex-col items-center justify-center text-center px-6 py-40"
         style={{ background: "var(--tc-cream)" }}
       >
-        <p
-          className="text-3xl md:text-5xl lg:text-6xl leading-[1.15] tracking-[-0.02em] max-w-3xl"
+        <h2
+          className="text-3xl md:text-5xl lg:text-6xl leading-[1.15] tracking-[-0.02em] max-w-3xl font-normal"
           style={{ fontFamily: "Sentient, Georgia, serif", fontWeight: 200, color: "var(--tc-obsidian)" }}
         >
           Everything else keeps changing.
-        </p>
+        </h2>
         <p
           className="text-3xl md:text-5xl lg:text-6xl italic leading-[1.15] tracking-[-0.02em] max-w-3xl mt-1"
           style={{ fontFamily: "Sentient, Georgia, serif", fontWeight: 300, color: "var(--tc-ember)" }}

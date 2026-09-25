@@ -16,10 +16,18 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 })
 
+const BASE_URL = "https://nextheta.com"
+const TITLE = "Theta Sound — Your personal executive assistant that works for you"
+const DESCRIPTION =
+  "Theta listens, comprehends, and executes the cumbersome, operational tasks creating friction in your daily life — so you can focus on what you're best at."
+
 export const metadata: Metadata = {
-  title: "Theta Sound — Your personal executive assistant that works for you",
-  description:
-    "Theta listens, comprehends, and executes the cumbersome, operational tasks creating friction in your daily life — so you can focus on what you're best at.",
+  metadataBase: new URL(BASE_URL),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
   generator: "v0.app",
   icons: {
     icon: [
@@ -29,6 +37,39 @@ export const metadata: Metadata = {
       { url: '/images/theta-symbol.png', type: 'image/png' },
     ],
   },
+  openGraph: {
+    title: TITLE,
+    description: DESCRIPTION,
+    url: BASE_URL,
+    siteName: "Theta Sound",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE,
+    description: DESCRIPTION,
+  },
+}
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${BASE_URL}/#organization`,
+      name: "Theta Sound",
+      url: BASE_URL,
+      logo: `${BASE_URL}/images/theta-symbol.png`,
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${BASE_URL}/#website`,
+      url: BASE_URL,
+      name: "Theta Sound",
+      publisher: { "@id": `${BASE_URL}/#organization` },
+    },
+  ],
 }
 
 export default function RootLayout({
@@ -39,6 +80,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
       <body suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <SmoothScroll>
             {children}
