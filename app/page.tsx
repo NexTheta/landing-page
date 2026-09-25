@@ -8,6 +8,7 @@ import { BentoGridSection } from "@/components/sections/bento-grid-section";
 import { FunctionDemoSection } from "@/components/sections/function-demo-section";
 import { MissionSection } from "@/components/sections/mission-section";
 import { CTASection } from "@/components/sections/cta-section";
+import { FAQSection } from "@/components/sections/faq-section";
 import { Footer } from "@/components/sections/footer";
 import { ScrollProgress } from "@/components/scroll-progress";
 
@@ -32,6 +33,7 @@ export default function Home() {
         <section id="mission">
           <MissionSection />
         </section>
+        <FAQSection />
         <section id="pricing">
           <CTASection />
         </section>

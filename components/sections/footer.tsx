@@ -9,11 +9,13 @@ import Image from "next/image";
 // a dead link is a worse signal, to both crawlers and visitors, than no link.
 const footerLinks = {
   Product: [
-    { name: "Features", href: "#features" },
-    { name: "Mission", href: "#mission" },
+    { name: "Features", href: "/#features" },
+    { name: "Mission", href: "/#mission" },
+    { name: "FAQ", href: "/#faq" },
   ],
   Company: [
-    { name: "Contact", href: "#contact" },
+    { name: "The Constant", href: "/the-constant" },
+    { name: "Contact", href: "/#contact" },
   ],
 };
 

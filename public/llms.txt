@@ -1,0 +1,18 @@
+# Theta Sound
+
+> Theta Sound is a screenless AI executive assistant built into true wireless (TWS) earbuds. You talk to it, and it listens, understands what you mean, and completes everyday operational tasks, like replies, reminders, and scheduling, without you opening an app or looking at a screen.
+
+Theta Sound (also referred to as Theta; website nextheta.com) is currently in development and accepting waitlist signups for early access.
+
+## Key facts
+
+- Form factor: true wireless (TWS) in-ear earbuds
+- Interface: voice only, no screen
+- Core idea: an executive assistant that carries tasks through to completion in the background, so users can focus on the work they are best at
+- Capabilities: natural voice commands, automated routines, reminders including location-based memory geo-pins, fitness tracking via biometric sensors, panic detection that alerts emergency contacts, adaptive active noise cancellation (AANC)
+- Status: in development; waitlist open at https://nextheta.com
+
+## Pages
+
+- [Home](https://nextheta.com/): Product overview, capabilities, FAQ, and waitlist signup
+- [The Constant](https://nextheta.com/the-constant): An interactive brand piece following one day with Theta Sound
