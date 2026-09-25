@@ -72,7 +72,6 @@ export const MobileMenu = ({ className }: MobileMenuProps) => {
               <div className="mt-8 pt-8 border-t border-white/20">
                 <WaitlistDialog 
                   triggerClassName="w-full px-8 py-4 bg-gradient-to-r from-red-500 to-red-600 text-white rounded-xl font-semibold text-lg shadow-lg"
-                  triggerText="Join Waitlist"
                 />
               </div>
             </nav>

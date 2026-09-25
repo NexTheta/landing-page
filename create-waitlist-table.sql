@@ -16,23 +16,18 @@ CREATE INDEX IF NOT EXISTS waitlist_email_idx ON waitlist(email);
 -- Create index on created_at for sorting
 CREATE INDEX IF NOT EXISTS waitlist_created_at_idx ON waitlist(created_at DESC);
 
--- DISABLE Row Level Security (RLS) for public access
--- We'll enable it later once we have proper authentication
-ALTER TABLE waitlist DISABLE ROW LEVEL SECURITY;
+-- Row Level Security: visitors may INSERT themselves, nothing else.
+-- The anon key ships to every browser, so without RLS anyone could read,
+-- edit, or delete every signup. Never disable RLS on this table and never
+-- add a SELECT policy for anon. Read signups from the Supabase dashboard.
+ALTER TABLE waitlist ENABLE ROW LEVEL SECURITY;
 
--- Note: If you want to enable RLS later, use these policies:
--- ALTER TABLE waitlist ENABLE ROW LEVEL SECURITY;
--- 
--- DROP POLICY IF EXISTS "Anyone can join waitlist" ON waitlist;
--- DROP POLICY IF EXISTS "Anyone can view waitlist" ON waitlist;
--- 
--- CREATE POLICY "Anyone can join waitlist" ON waitlist
---   FOR INSERT
---   WITH CHECK (true);
--- 
--- CREATE POLICY "Anyone can view waitlist" ON waitlist
---   FOR SELECT
---   USING (true);
+DROP POLICY IF EXISTS "Anyone can join waitlist" ON waitlist;
+DROP POLICY IF EXISTS "Anyone can view waitlist" ON waitlist;
+CREATE POLICY "Anyone can join waitlist" ON waitlist
+  FOR INSERT
+  TO anon
+  WITH CHECK (true);
 
 -- Create a function to automatically update updated_at timestamp
 CREATE OR REPLACE FUNCTION update_updated_at_column()

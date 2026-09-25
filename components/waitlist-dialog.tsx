@@ -40,79 +40,40 @@ export function WaitlistDialog({ triggerClassName = "" }: { triggerClassName?: s
     setLoading(true)
     
     try {
-      const insertData = { 
-        email: email.toLowerCase().trim(), 
-        name: name.trim()
-      }
-      
-      console.log('🔄 Attempting to insert into Supabase:', insertData)
-      console.log('📍 Supabase URL:', process.env.NEXT_PUBLIC_SUPABASE_URL)
-      console.log('🔑 Has API Key:', !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
-      
-      const { data, error } = await supabase
+      // No .select() after the insert: the table allows inserts only, so
+      // visitors can add themselves but can never read anyone else's row.
+      const { error } = await supabase
         .from("waitlist")
-        .insert([insertData])
-        .select()
-        
-      console.log('✅ Supabase response - Data:', data)
-      console.log('❌ Supabase response - Error:', error)
-        
+        .insert([{ email: email.toLowerCase().trim(), name: name.trim() }])
+
       if (error) {
-        console.error('Supabase error:', error)
-        
-        const errorMessage = error.message || JSON.stringify(error)
-        const errorCode = error.code
-        
-        // Check for RLS policy violation
-        if (errorCode === "42501" || errorMessage.includes("row-level security") || errorMessage.includes("policy")) {
-          toast({ 
-            title: "🔒 Security Policy Issue", 
-            description: "Please run fix-rls.sql in Supabase SQL Editor to allow public signups.", 
-            variant: "destructive" 
-          })
-          return
-        }
-        
-        // Check if table doesn't exist
-        if (errorMessage.includes("table") || errorMessage.includes("waitlist") || errorMessage.includes("schema cache") || errorMessage.includes("relation")) {
-          toast({ 
-            title: "⚠️ Database Setup Required", 
-            description: "The waitlist table hasn't been created yet. Please run the SQL script in create-waitlist-table.sql", 
-            variant: "destructive" 
-          })
-          return
-        }
-        
-        // Check for duplicate email
-        if (errorCode === "23505" || errorMessage.includes("duplicate") || errorMessage.includes("unique")) {
-          toast({ 
-            title: "Already registered! ✓", 
-            description: "This email is already on the waitlist. We'll be in touch soon!" 
+        // Postgres unique violation: this email already signed up.
+        if (error.code === "23505") {
+          toast({
+            title: "You're already on the list",
+            description: "This email is already signed up. We'll be in touch.",
           })
           setOpen(false)
           setEmail("")
           setName("")
           return
         }
-        
         throw error
       }
-      
-      // Success!
-      toast({ 
-        title: "🎉 You're on the list!", 
-        description: "We'll notify you when Theta Sound is ready." 
+
+      toast({
+        title: "You're on the list!",
+        description: "We'll let you know when Theta Sound is ready.",
       })
       setOpen(false)
       setEmail("")
       setName("")
-      
-    } catch (error: any) {
-      console.error('Error submitting to waitlist:', error)
-      toast({ 
-        title: "Oops, something went wrong", 
-        description: error?.message || "Please check your connection and try again.", 
-        variant: "destructive" 
+    } catch (error) {
+      console.error("Waitlist signup failed:", error)
+      toast({
+        title: "We couldn't add you just now",
+        description: "Please try again in a moment.",
+        variant: "destructive",
       })
     } finally {
       setLoading(false)

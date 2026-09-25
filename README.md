@@ -1,30 +1,49 @@
-# Archive
+# Theta Sound landing page
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Marketing site for Theta Sound, a screenless AI executive assistant built into TWS earbuds. Live at [nextheta.com](https://nextheta.com).
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/shared-8867s-projects/v0-archive)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/7OBKdWwIbzR)
+## Stack
 
-## Overview
-
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+Next.js 15 (App Router), React 19, Tailwind CSS 4, Framer Motion. Package manager is pnpm (`pnpm-lock.yaml`).
 
 ## Deployment
 
-Your project is live at:
+Every push to `main` deploys automatically through Vercel's GitHub integration:
 
-**[https://vercel.com/shared-8867s-projects/v0-archive](https://vercel.com/shared-8867s-projects/v0-archive)**
+- Vercel project: `landing-page`, team `thetasounddevs-projects`
+- Domains: `nextheta.com`, `www.nextheta.com`, `landing-page-three-theta-52.vercel.app`
 
-## Build your app
+There is no GitHub Actions deployment.
 
-Continue building your app on:
+## Local development
 
-**[https://v0.app/chat/projects/7OBKdWwIbzR](https://v0.app/chat/projects/7OBKdWwIbzR)**
+```bash
+pnpm install
+pnpm dev
+```
 
-## How It Works
+Create `.env.local` with the waitlist's Supabase credentials:
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+```
+NEXT_PUBLIC_SUPABASE_URL=https://<project>.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon key>
+```
+
+The same two variables must be set in the Vercel project for production.
+
+## Waitlist backend
+
+Signups go to a `waitlist` table in Supabase. To create it, run `create-waitlist-table.sql` in the Supabase SQL Editor. It enables row level security with an insert-only policy, so visitors can add themselves but can't read other signups. Never disable RLS on this table. See `SUPABASE_SETUP.md` for the full walkthrough.
+
+## Pages and SEO routes
+
+| Route | Source |
+| --- | --- |
+| `/` | `app/page.tsx` |
+| `/the-constant` | `app/the-constant/page.tsx` |
+| `/sitemap.xml` | `app/sitemap.ts` |
+| `/robots.txt` | `app/robots.ts` |
+| `/llms.txt` | `public/llms.txt` |
+| `/opengraph-image` | `app/opengraph-image.tsx` |
+
+Site-wide metadata and structured data (Organization, WebSite, Product) live in `app/layout.tsx`. The FAQ and its FAQPage schema share one data array in `components/sections/faq-section.tsx`.
