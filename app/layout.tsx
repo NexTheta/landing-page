@@ -17,9 +17,9 @@ const geistMono = Geist_Mono({
 })
 
 const BASE_URL = "https://nextheta.com"
-const TITLE = "Theta Sound — Your personal executive assistant that works for you"
+const TITLE = "Theta Sound — Screenless AI Executive Assistant"
 const DESCRIPTION =
-  "Theta listens, comprehends, and executes the cumbersome, operational tasks creating friction in your daily life — so you can focus on what you're best at."
+  "Theta is a screenless AI executive assistant that listens, comprehends, and executes the operational tasks creating friction in your day — so you can focus on what you're best at."
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
