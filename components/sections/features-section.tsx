@@ -9,17 +9,17 @@ const features = [
   {
     icon: Brain,
     title: "Conversational",
-    description: "Natural dialogue that understands context and intent. Control in every moment through the power of your voice.",
+    description: "Talk the way you normally would. Theta follows context and intent, so you don't have to phrase things like commands.",
   },
   {
     icon: Zap,
     title: "Automated workflows",
-    description: "Set it once, forget it forever. Smart routines that adapt to your life and seamlessly work in the background.",
+    description: "Set up a routine once and it keeps running in the background, adjusting as your days change.",
   },
   {
     icon: Sparkles,
     title: "Data turned into functional utility",
-    description: "Your data transformed into actionable insights. Location-based reminders, fitness tracking, and smart suggestions.",
+    description: "What Theta learns gets put to work: reminders tied to places, fitness tracking, and suggestions.",
   },
 ];
 
@@ -51,7 +51,7 @@ export function FeaturesSection() {
                 Voice OS
               </h2>
               <p className="text-xl text-foreground/70">
-                Control in every moment. Every feature is crafted to create the most natural experience possible.
+                Control in every moment, using nothing but your voice.
               </p>
             </motion.div>
 

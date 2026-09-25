@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 
 const features = [
-  
-  "PERSONALIZED",
-  "INTUITIVE",
-  "ADAPTIVE",
-  "IMMERSIVE",
+  "VOICE OS",
+  "TWS EARBUDS",
+  "BIOMETRIC SENSORS",
+  "AANC",
+  "NO SCREEN",
 ];
 
 export function InfiniteRibbon() {

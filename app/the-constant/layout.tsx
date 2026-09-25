@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 
-const TITLE = "The Constant — A Day With Theta Sound"
+const TITLE = "The Constant: a day with Theta Sound"
 const DESCRIPTION =
-  "Scroll through one ordinary day and watch the noise around you resolve into calm — while Theta Sound stays the one constant that never changes."
+  "Scroll through one ordinary day and watch the noise around you settle. Theta Sound is the one thing that stays the same the whole way through."
 
 export const metadata: Metadata = {
   title: TITLE,

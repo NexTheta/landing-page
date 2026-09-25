@@ -7,32 +7,32 @@ import { AmicroFeatureCard } from "@/components/ui/amicro-feature-card";
 const bentoItems = [
   {
     title: "Book a Cab",
-    description: "Just say where you want to go—we'll handle the rest with your preferred ride service",
+    description: "Say where you're going and Theta books it with the ride service you already use.",
     icon: Car,
   },
   {
     title: "Voice Commands",
-    description: "Natural conversations, not rigid commands",
+    description: "Speak normally. There's no list of phrases to memorize.",
     icon: Mic,
   },
   {
     title: "Track Fitness",
-    description: "Monitor your health without lifting a finger",
+    description: "The biometric sensors keep track of your fitness through the day.",
     icon: Heart,
   },
   {
     title: "Memory Geo-Pins",
-    description: "Smart reminders triggered by locations—never forget when you arrive",
+    description: "Reminders tied to a place, so they go off when you actually get there.",
     icon: MapPin,
   },
   {
     title: "Panic Detection",
-    description: "Built-in safety that alerts emergency contacts when you need help",
+    description: "Alerts your emergency contacts when you need help.",
     icon: ShieldAlert,
   },
   {
     title: "All-Day Wear",
-    description: "Sits comfortably in your ear from morning to night, barely there",
+    description: "Made to stay comfortable in your ear from morning to night.",
     icon: Ear,
   },
 ];
@@ -52,10 +52,10 @@ export function BentoGridSection() {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-light text-foreground mb-6">
-            Powerful capabilities
+            What it can do
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            From simple tasks to life-saving features, all controlled by your voice
+            Everyday errands and safety features, all handled by voice.
           </p>
         </motion.div>
 

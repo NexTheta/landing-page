@@ -7,19 +7,19 @@ const stats = [
   {
     value: "15+",
     label: "Integrations",
-    description: "Connect with your favorite apps",
+    description: "Works with the apps you already use",
     count: 15,
   },
   {
     value: "0",
     label: "Screens",
-    description: "Pure audio experience",
+    description: "Everything happens by voice",
     count: 0,
   },
   {
     value: "∞",
     label: "Possibilities",
-    description: "Endless personalization",
+    description: "It adapts to how you use it",
     count: null,
   },
 ];
@@ -57,7 +57,7 @@ export function StatsSection() {
             Built for Future.
           </h2>
           <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-            <span className="block mb-2">No screens // NO friction // NO distraction.</span>
+            <span className="block mb-2">No screens // No friction // No distraction.</span>
             <span className="block font-medium text-foreground/90">We put the power back into your control</span>
           </p>
         </motion.div>

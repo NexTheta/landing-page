@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
-export const alt = "Theta Sound — Your personal executive assistant that works for you"
+export const alt = "Theta Sound: your personal executive assistant that works for you"
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 

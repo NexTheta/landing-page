@@ -135,7 +135,7 @@ export default function TheConstantPage() {
   return (
     <main style={{ background: GROUND[scenes[0].ground] }}>
       <h1 className="sr-only">
-        The Constant — a day with Theta Sound, the in-ear AI assistant that stays constant while everything else changes
+        The Constant: a day with Theta Sound, the in-ear AI assistant that stays the same while everything else changes
       </h1>
       {/* Persistent header */}
       <div

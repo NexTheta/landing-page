@@ -115,7 +115,7 @@ export function MissionSection() {
             transition={{ duration: 0.8, delay: 1 }}
             className="text-2xl md:text-3xl text-foreground/70 max-w-3xl mx-auto font-light leading-relaxed"
           >
-            That's why we built Theta — frictionless experiences that
+            That's why we built Theta: frictionless experiences that
             understand, adapt, and frankly improve your life without
             demanding your constant attention.
           </motion.p>

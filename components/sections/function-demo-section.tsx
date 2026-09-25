@@ -10,7 +10,7 @@ const demos = [
     tab: "Book a Ride",
     icon: Car,
     said: "Get me a cab to the airport",
-    reply: "Booked! Your Uber is 4 minutes away — ₹340, arriving 6:45am.",
+    reply: "Booked. Your Uber is 4 minutes away, ₹340, arriving 6:45am.",
   },
   {
     key: "reminder",
@@ -30,7 +30,7 @@ const demos = [
     key: "panic",
     tab: "Emergency Alert",
     icon: ShieldAlert,
-    said: "Hold to alert — I need help",
+    said: "I need help",
     reply: "Alert sent to Mom and Alex with your live location.",
   },
 ];

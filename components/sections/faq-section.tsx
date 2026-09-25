@@ -14,7 +14,7 @@ export const faqs = [
   },
   {
     q: "What can Theta do?",
-    a: "Theta handles natural voice commands and automated routines, sets reminders including location-based memory geo-pins, tracks fitness through built-in biometric sensors, offers panic detection that alerts your emergency contacts, and uses adaptive active noise cancellation (AANC) to keep your surroundings manageable.",
+    a: "Theta handles natural voice commands and automated routines, sets reminders including location-based memory geo-pins, tracks fitness through built-in biometric sensors, offers panic detection that alerts your emergency contacts, and uses adaptive active noise cancellation (AANC) to cut down background noise.",
   },
   {
     q: "Does Theta have a screen?",

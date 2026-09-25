@@ -133,7 +133,7 @@ export function WaitlistDialog({ triggerClassName = "" }: { triggerClassName?: s
             Join the Waitlist
           </DialogTitle>
           <DialogDescription className="text-base text-gray-600 dark:text-gray-400">
-            Be the first to experience the future of audio.
+            Get early access to Theta Sound before it launches.
           </DialogDescription>
         </DialogHeader>
         

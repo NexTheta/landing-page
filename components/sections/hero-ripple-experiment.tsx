@@ -99,7 +99,7 @@ export function HeroRippleExperiment() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-lg md:text-xl text-neutral-600 mb-10 max-w-2xl mx-auto leading-relaxed font-medium"
         >
-          Theta listens, comprehends, and executes the cumbersome, operational tasks creating friction in your daily life — so you can focus on what you're best at, the work you actually enjoy.
+          Theta listens, comprehends, and executes the cumbersome, operational tasks creating friction in your daily life, so you can focus on what you're best at: the work you actually enjoy.
         </motion.p>
 
         {/* Tech badges */}
